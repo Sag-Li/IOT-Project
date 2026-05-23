@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int valor;
+    int led_ligado = 0;
+    int contagem_ligou = 0;
+
+    while (1) {
+        printf("Digite o valor: ");
+        scanf("%d", &valor);
+
+        if (valor == -1) {
+            break;
+        }
+
+        if (valor > 700) {
+            printf("LED ON\n");
+            if (led_ligado == 0) {
+                contagem_ligou++;
+                led_ligado = 1;
+            }
+        } else {
+            printf("LED OFF\n");
+            led_ligado = 0;
+        }
+    }
+
+    printf("O LED ligou %d vezes.\n", contagem_ligou);
+
+    return 0;
+}
