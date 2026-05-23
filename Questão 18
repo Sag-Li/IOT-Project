@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+float calcular_media(float vetor[], int tamanho) {
+    float soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += vetor[i];
+    }
+    return soma / tamanho;
+}
+
+int main() {
+    float meu_vetor[10];
+    
+    for (int i = 0; i < 10; i++) {
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%f", &meu_vetor[i]);
+    }
+    
+    float media = calcular_media(meu_vetor, 10);
+    printf("A média dos elementos do vetor é: %.2f\n", media);
+    
+    return 0;
+}
