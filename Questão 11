@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int numeros[8];
+    int i;
+    int soma_impares = 0;
+    int contador_impares = 0;
+
+    for (i = 0; i < 8; i++) {
+        printf("Digite o numero %d: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+
+    printf("Numeros pares digitados: ");
+    for (i = 0; i < 8; i++) {
+        if (numeros[i] % 2 == 0) {
+            printf("%d ", numeros[i]);
+        } else {
+            soma_impares += numeros[i];
+            contador_impares++;
+        }
+    }
+    printf("\n");
+
+    if (contador_impares > 0) {
+        float media = (float)soma_impares / contador_impares;
+        printf("Media dos numeros impares: %.2f\n", media);
+    } else {
+        printf("Nenhum numero ímpar foi digitado.\n");
+    }
+
+    return 0;
+}
