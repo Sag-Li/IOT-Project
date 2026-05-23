@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    float v1, v2, v3, media, maior;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &v1);
+
+    printf("Digite o segundo valor: ");
+    scanf("%f", &v2);
+
+    printf("Digite o terceiro valor: ");
+    scanf("%f", &v3);
+
+    maior = v1;
+    if (v2 > maior) {
+        maior = v2;
+    }
+    if (v3 > maior) {
+        maior = v3;
+    }
+
+    media = (v1 + v2 + v3) / 3.0;
+
+    printf("Maior valor: %.2f\n", maior);
+    printf("Media: %.2f\n", media);
+
+    if (media > (maior / 2.0)) {
+        printf("A media é maior que o maior número dividido por 2\n");
+    } else {
+        printf("A media não émaior que o maior número dividido por 2\n");
+    }
+
+    return 0;
+}
