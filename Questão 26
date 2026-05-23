@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, j, duplicado;
+
+    printf("Digite a quantidade de valores: ");
+    scanf("%d", &n);
+
+    int vetor[n];
+
+    for (i = 0; i < n; i++) {
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    printf("Resultado sem duplicados: ");
+    for (i = 0; i < n; i++) {
+        duplicado = 0;
+        for (j = 0; j < i; j++) {
+            if (vetor[i] == vetor[j]) {
+                duplicado = 1;
+                break;
+            }
+        }
+        if (!duplicado) {
+            printf("%d ", vetor[i]);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
