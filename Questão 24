@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int velocidade;
+
+    scanf("%d", &velocidade);
+
+    if (velocidade < 341) {
+        printf("Baixa\n");
+    } else if (velocidade < 682) {
+        printf("Média\n");
+    } else {
+        printf("Alta\n");
+    }
+
+    return 0;
+}
