@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void simular_sensor(int valor) {
+    if (valor > 800) {
+        printf("CRÍTICO\n");
+    } else if (valor > 500) {
+        printf("ALERTA\n");
+    } else {
+        printf("NORMAL\n");
+    }
+}
+
+int main() {
+    int leitura;
+    
+    printf("Digite o valor do sensor: ");
+    scanf("%d", &leitura);
+    
+    simular_sensor(leitura);
+    
+    return 0;
+}
