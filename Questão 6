@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int numero, i;
+    int pares = 0;
+    int maiores = 0;
+
+    for (i = 0; i < 10; i++) {
+        printf("Digite um número: ");
+        scanf("%d", &numero);
+
+        if (numero % 2 == 0) {
+            pares++;
+        }
+
+        if (numero > 50) {
+            maiores++;
+        }
+    }
+
+    printf("Quantidade de números pares: %d\n", pares);
+    printf("Quantidade de números maiores que 50: %d\n", maiores);
+
+    return 0;
+}
